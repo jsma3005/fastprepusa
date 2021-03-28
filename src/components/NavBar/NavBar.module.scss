@@ -1,4 +1,5 @@
 $light: #efefef;
+$main:#3FA2A2;
 
 .root{
     position: absolute;
@@ -16,7 +17,7 @@ $light: #efefef;
                     font-size: 1.3rem;
                     font-weight: 500;
                     &:hover{
-                        color: #000;
+                        color: $main;
                     }
                 }
             }
