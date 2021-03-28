@@ -13,19 +13,19 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className={`${cls.navList} navbar-nav mb-2 mb-lg-0`}>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">О нас</a>
+                                <a className="nav-link" href="/">О нас</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Услуги</a>
+                                <a className="nav-link" href="/">Услуги</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Цены</a>
+                                <a className="nav-link" href="/">Цены</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Склад на карте</a>
+                                <a className="nav-link" href="/">Склад на карте</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Контакты</a>
+                                <a className="nav-link" href="/">Контакты</a>
                             </li>
                         </ul>
                     </div>
