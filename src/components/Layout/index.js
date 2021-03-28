@@ -1,4 +1,4 @@
-import Footer from '../Footer';
+// import Footer from '../Footer';
 import NavBar from '../NavBar';
 import cls from './Layout.module.scss';
 
