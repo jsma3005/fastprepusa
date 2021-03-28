@@ -1,0 +1,60 @@
+$light: #efefef;
+$main:#3FA2A2;
+
+.root{
+    position: relative;
+    .img{
+        width: 100% !important;
+        height: 100vh !important;
+        position: relative;
+        z-index: 2;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.7);
+            z-index: 3;
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+
+    .content{
+        position: absolute;
+        z-index: 10;
+        top: 20%;
+        left: 5%;
+        color: #efefef;
+        h5{
+            color: $main;
+            margin-bottom: 0;
+        }
+        h1{
+            font-size: 5rem;
+            letter-spacing: 3px;
+            line-height: 1.4;
+            font-weight: bold;
+        }
+        .coloredTitle{
+            background-color: rgba(63, 162, 162, .4);
+            display: inline-block;
+            padding: .5rem;
+            border-radius: 5px;
+        }
+
+        .moreBtn{
+            background-color: none;
+            padding: 1rem;
+            color: $light;
+            text-transform: uppercase;
+            border-color: $main;
+            font-size: 1.2rem;
+            &:hover{
+                background-color: $main;
+            }
+        }
+    }
+    
+}
