@@ -82,7 +82,7 @@ const Header = () => {
                 <h1>
                     в США  
                 </h1>
-                <button className={`${cls.moreBtn} btn`}>Подробнее...</button>
+                {/* <button className={`${cls.moreBtn} btn`}>Подробнее...</button> */}
             </div>
         </div>
     )

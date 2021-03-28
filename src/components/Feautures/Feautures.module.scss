@@ -9,6 +9,7 @@ $main:#3FA2A2;
     box-shadow: 0 8px 6px -6px rgb(41, 41, 41);
     position: relative;
     top: -100px;
+    z-index: 12;
     .left{
         background: url('../../assets/feautures-bg.jpg') center / cover;
         position: relative;
