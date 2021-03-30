@@ -1,0 +1,14 @@
+$light: #efefef;
+$dark: #183650;
+$main:#3FA2A2;
+$secondary: #797E82;
+
+.loadingSpinner{
+    display: flex;
+    justify-content: center;
+    div{
+        width: 60px;
+        height: 60px;
+        color: $main !important;
+    }
+}

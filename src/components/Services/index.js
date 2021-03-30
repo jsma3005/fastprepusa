@@ -11,6 +11,7 @@ import Glass from '../../assets/services/glass.jpg';
 import Back from '../../assets/services/back.jpg';
 import Storage from '../../assets/services/storage.jpg';
 import Vykup from '../../assets/services/vykup.jpg';
+import Title from '../Title';
 
 const carouselData = [
     {
@@ -67,11 +68,7 @@ SwiperCore.use([Autoplay]);
 const Services = () => {
     return (
         <div className={cls.root}>
-            <div className={cls.titleContent}>
-                <h5>Наши услуги</h5>
-                <h1>Что мы предлагаем вам</h1>
-                <div className={cls.line}></div>
-            </div>
+            <Title subTitle='Наши услуги' title='Что мы предлагаем вам' />
             <div className={cls.carousel}>
                 <Swiper
                     slidesPerView={3}

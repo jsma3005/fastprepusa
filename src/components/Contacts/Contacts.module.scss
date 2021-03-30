@@ -1,0 +1,67 @@
+$light: #efefef;
+$dark: #183650;
+$dark-bg: #31373f;
+$main:#3FA2A2;
+$secondary: #797E82;
+
+.root{
+    padding: 3rem;
+    padding-bottom: 1rem;
+    background-color: $dark-bg;
+    color: $light;
+    .title{
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .contactsList{
+        list-style: none;
+        padding-left: 1rem;
+        li{
+            margin-bottom: .5rem;
+            font-size: 16px;
+            a{
+                text-decoration: none;
+                color: $light;
+                &:hover{
+                    color: $main;
+                }
+            }
+        }
+    }
+
+    .navList{
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+        li{
+            margin: .5rem 0;
+            a{
+                color: $light;
+                text-decoration: none;
+                &:hover{
+                    color: $main;
+                }
+            }
+        }
+    }
+
+    .socialList{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li{
+            margin: 0 1rem;
+            a{
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        margin-top: 3rem;
+    }
+}

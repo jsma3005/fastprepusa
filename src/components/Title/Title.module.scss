@@ -1,0 +1,27 @@
+$light: #efefef;
+$dark: #183650;
+$main:#3FA2A2;
+$secondary: #797E82;
+
+.root{
+    .titleContent{
+        padding: 3rem;
+        h5{
+            color: $secondary;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+        h1{
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $dark;
+        }
+        .line{
+            width: 100px;
+            height: 2px;
+            background-color: $main;
+            margin-top: 1rem;
+        }
+    }
+}

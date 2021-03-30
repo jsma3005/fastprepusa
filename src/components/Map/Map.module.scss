@@ -1,0 +1,11 @@
+$light: #efefef;
+$dark: #183650;
+$main:#3FA2A2;
+$secondary: #797E82;
+
+
+.root{
+    .map{
+        border: 10px solid $main;
+    }
+}
