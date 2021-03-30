@@ -51,7 +51,7 @@ const Contacts = () => {
                         <li><b>Адрес:</b> <a href="/">7420 Avenida Del Mar, unit 2601</a></li>
                         <li><b>Номер телефона:</b> <a href="tel:+1(347)444-2565">+1(347)444-2565</a></li>
                         <li><b>Электронная почта:</b> <a href="mailto:office@fastprepusa.com">office@fastprepusa.com</a></li>
-                        <li><b>Время работы:</b> <a>ПН-ПТ: 8:00AM - 6:00PM</a></li>
+                        <li><b>Время работы:</b> <span>ПН-ПТ: 8:00AM - 6:00PM</span></li>
                     </ul>
                 </div>
                 <div className='col-lg-4'>
