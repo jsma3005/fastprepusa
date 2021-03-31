@@ -53,6 +53,7 @@ $secondary: #797E82;
         justify-content: center;
         li{
             margin: 0 1rem;
+            
             a{
                 img{
                     width: 30px;
@@ -63,5 +64,13 @@ $secondary: #797E82;
 
     .copyright{
         margin-top: 3rem;
+    }
+}
+
+
+.socialList img{
+    transition: 1s;
+    &:hover{
+        transform: rotate(360deg);
     }
 }

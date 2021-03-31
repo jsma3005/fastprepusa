@@ -67,7 +67,7 @@ const carouselData = [
 SwiperCore.use([Autoplay]);
 const Services = () => {
     return (
-        <div className={cls.root}>
+        <div className={cls.root} id='services'>
             <Title subTitle='Наши услуги' title='Что мы предлагаем вам' />
             <div className={cls.carousel}>
                 <Swiper

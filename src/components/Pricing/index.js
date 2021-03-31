@@ -17,7 +17,7 @@ const Pricing = () => {
     console.log('PRICE SUCCESS =>', pricingSuccess);
 
     return (
-        <div className={cls.root}>
+        <div className={cls.root} id="prices">
             <Title subTitle='Наши цены' title='Тарифы по лучшим ценам' />
             <div className={cls.pricingContent}>
                 <div className={cls.pricingSection}>

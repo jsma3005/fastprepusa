@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { socialRequest } from '../../redux/reducers/social';
+import { NavHashLink, HashLink } from 'react-router-hash-link'
 import Spinner from '../Spinner';
 import cls from './Contacts.module.scss';
 
@@ -23,7 +24,7 @@ const navData = [
     {
         id: 4,
         title: 'Цены',
-        link: '/#price'
+        link: '/#prices'
     },
     {
         id: 5,
@@ -42,12 +43,12 @@ const Contacts = () => {
     }, [dispatch])
 
     return (
-        <div className={cls.root}>
+        <div id="contacts" className={cls.root}>
             <div className='row'>
                 <div className='col-lg-4'>
                     <h5 className={cls.title}>Fast Prep USA</h5>
                     <ul className={cls.contactsList}>
-                        <li><b>Адрес:</b> <a href="/">7420 Avenida Del Mar, unit 2601</a></li>
+                        <li><b>Адрес:</b> <HashLink to="/#map">7420 Avenida Del Mar, unit 2601</HashLink></li>
                         <li><b>Номер телефона:</b> <a href="tel:+1(347)444-2565">+1(347)444-2565</a></li>
                         <li><b>Электронная почта:</b> <a href="mailto:office@fastprepusa.com">office@fastprepusa.com</a></li>
                         <li><b>Время работы:</b> <span>ПН-ПТ: 8:00AM - 6:00PM</span></li>
@@ -59,7 +60,7 @@ const Contacts = () => {
                         {
                             navData.map(({link, title, id}) => (
                                 <li key={id}>
-                                    <a href={link}>{title}</a>
+                                    <NavHashLink to={link}>{title}</NavHashLink>
                                 </li>
                             ))
                         }
@@ -72,7 +73,7 @@ const Contacts = () => {
                             socialSuccess ? (
                                 socialData.map(({id, link, image_icon}) => (
                                     <li key={id}>
-                                        <a target='_blank' rel='noreferrer' href={link}>
+                                        <a className={cls.socialLinks} target='_blank' rel='noreferrer' href={link}>
                                             <img src={image_icon} alt='social' />
                                         </a>
                                     </li>
