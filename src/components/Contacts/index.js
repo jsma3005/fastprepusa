@@ -41,7 +41,6 @@ const Contacts = () => {
         dispatch(socialRequest());
     }, [dispatch])
 
-
     return (
         <div className={cls.root}>
             <div className='row'>
