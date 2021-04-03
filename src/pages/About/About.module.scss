@@ -1,0 +1,104 @@
+$light: #efefef;
+$dark: #183650;
+$main:#3FA2A2;
+$secondary: #797E82;
+
+.root{
+    .head{
+        width: 100%;
+        height: 65vh;
+        background: url('../../assets/about-bg.jpg') center / cover no-repeat fixed;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 65vh;
+            top: 0;
+            left: 0;
+            // background: #0b2b32;
+            // opacity: .6;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .content{
+            position: relative;
+            z-index: 3;
+            color: $light;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            h5{
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            h1{
+                font-size: 5rem;
+                text-transform: uppercase;
+            }
+            .line{
+                width: 100px;
+                height: 3px;
+                background-color: $main;
+            }
+        }
+    }
+    .about{
+        padding: 6rem 3rem;
+        .aboutRow{
+            .aboutLeft{
+                .aboutTitle{
+                    h1{
+                        font-size: 4rem;
+                        color: $dark;
+                    }
+                    .line{
+                        width: 100px;
+                        height: 4px;
+                        background-color: $main;
+                        margin: 1rem 0;
+                    }
+                }
+                p{
+                    color: $dark;
+                    letter-spacing: 1.2px;
+                    line-height: 1.5;
+                }
+            }
+            .aboutRight{
+                img{
+                    width: 100%;
+                }   
+            }
+        }
+
+        .misson{
+            margin-top: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .missionLeft, .missionRight{
+                width: 100%;
+                text-align: center;
+                padding: 2rem;
+                border: 2px solid $light;
+                box-shadow: 0px 0px 10px $light;
+                cursor: pointer;
+                h1{
+                    font-size: 2rem;
+                    color: $dark;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    color: $dark;
+                }
+            }
+            .tilt{
+                width: 80%;
+                height: 80%;
+                margin: 1rem 3rem;
+            }
+        }
+    }
+}

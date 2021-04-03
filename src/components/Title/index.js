@@ -1,7 +1,6 @@
 import cls from './Title.module.scss';
 
-
-const Title = ({subTitle, title}) => {
+const Title = ({subTitle = '', title = ''}) => {
     return (
         <div className={cls.root}>
             <div className={cls.titleContent}>

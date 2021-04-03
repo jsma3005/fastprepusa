@@ -1,6 +1,6 @@
 import Title from '../Title';
 import cls from './Partners.module.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import SwiperCore, { Autoplay } from 'swiper';
 import { useEffect } from 'react';
@@ -14,6 +14,7 @@ SwiperCore.use([Autoplay]);
 const Partners = () => {
     const dispatch = useDispatch();
     const { partnersData, partnersSuccess } = useSelector(s => s.partners);
+    const { selectedLang: {partners} } = useSelector(s => s.langs);
 
     useEffect(() => {
         dispatch(partnersRequest())
@@ -21,27 +22,20 @@ const Partners = () => {
 
     return (
         <div className={cls.root}>
-            <Title subTitle='Оплата' title='Мы поддерживаем' />
+            <Title subTitle={partners.subTitle} title={partners.title} />
             {
                 partnersSuccess ? (
-                    <Swiper
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false
-                        }}
-                        loop={true}
-                        centeredSlides={true}
-                        slidesPerView={3}
-                        spaceBetween={100}
+                    <div
+                        className={cls.payContainer}
                     >
                         {
                             partnersData.map(({id, image, title}) => (
-                                <SwiperSlide className={cls.slideItem} key={id}>
+                                <div className={cls.slideItem} key={id}>
                                     <img src={image} alt={title} />
-                                </SwiperSlide>
+                                </div>
                             ))
                         }
-                    </Swiper>
+                    </div>
                 ) : (
                     <Spinner />
                 )

@@ -11,6 +11,7 @@ import 'swiper/components/autoplay';
 import 'swiper/components/effect-fade/effect-fade.scss';
 // Text Animation
 import TextTransition, { presets } from "react-text-transition";
+import { useSelector } from 'react-redux';
 
 const carouselData = [
     {
@@ -30,16 +31,11 @@ const carouselData = [
     }
 ]
 
-const TEXTS = [
-    "Надежный",
-    "Безопасный",
-    "Лучший",
-];
-
 SwiperCore.use([Autoplay, EffectFade]);
 
 const Header = () => {
     const [index, setIndex] = useState(0);
+    const {selectedLang: {header}} = useSelector(s => s.langs);
 
     useEffect(() => {
         const intervalId = setInterval(() =>
@@ -67,22 +63,20 @@ const Header = () => {
                 }
             </Swiper>
             <div className={cls.content}>
-                {/* <h5>Online item inventory</h5> */}
-                <h5>Онлайн инвентарь</h5>
+                <h5>{header.inventory}</h5>
                 <h1>
                     <TextTransition
-                        text={ TEXTS[index % TEXTS.length] }
+                        text={ header.texts[index % header.texts.length] }
                         springConfig={ presets.slow }
                         direction='down'
                     />
                 </h1>
                 <h1 className={cls.coloredTitle}>
-                    Преп центр
+                    {header.title}
                 </h1>
                 <h1>
-                    в США  
+                    {header.subTitle}
                 </h1>
-                {/* <button className={`${cls.moreBtn} btn`}>Подробнее...</button> */}
             </div>
         </div>
     )

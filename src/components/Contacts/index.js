@@ -5,38 +5,11 @@ import { NavHashLink, HashLink } from 'react-router-hash-link'
 import Spinner from '../Spinner';
 import cls from './Contacts.module.scss';
 
-const navData = [
-    {
-        id: 1,
-        title: 'Главная',
-        link: '/#navigation',
-    },
-    {
-        id: 2,
-        title: 'О нас',
-        link: '/about'
-    },
-    {
-        id: 3,
-        title: 'Услуги',
-        link: '/#services'
-    },
-    {
-        id: 4,
-        title: 'Цены',
-        link: '/#prices'
-    },
-    {
-        id: 5,
-        title: 'Склад на карте',
-        link: '/#map'
-    }
-]
-
 const Contacts = () => {
     const dispatch = useDispatch();
     const {socialData, socialSuccess} = useSelector(s => s.social);
     const currentYear = new Date().getFullYear();
+    const {selectedLang: {contacts}} = useSelector(s => s.langs);
 
     useEffect(() => {
         dispatch(socialRequest());
@@ -48,17 +21,17 @@ const Contacts = () => {
                 <div className='col-lg-4'>
                     <h5 className={cls.title}>Fast Prep USA</h5>
                     <ul className={cls.contactsList}>
-                        <li><b>Адрес:</b> <HashLink to="/#map">7420 Avenida Del Mar, unit 2601</HashLink></li>
-                        <li><b>Номер телефона:</b> <a href="tel:+1(347)444-2565">+1(347)444-2565</a></li>
-                        <li><b>Электронная почта:</b> <a href="mailto:office@fastprepusa.com">office@fastprepusa.com</a></li>
-                        <li><b>Время работы:</b> <span>ПН-ПТ: 8:00AM - 6:00PM</span></li>
+                        <li><b>{contacts.address}:</b> <HashLink to="/#map">7420 Avenida Del Mar, unit 2601</HashLink></li>
+                        <li><b>{contacts.number}:</b> <a href="tel:+1(347)444-2565">+1(347)444-2565</a></li>
+                        <li><b>{contacts.email}:</b> <a href="mailto:office@fastprepusa.com">office@fastprepusa.com</a></li>
+                        <li><b>{contacts.timeTitle}:</b> <span>{contacts.time}</span></li>
                     </ul>
                 </div>
                 <div className='col-lg-4'>
-                    <h5 className={cls.title}>Навигация по сайту</h5>
+                    <h5 className={cls.title}>{contacts.nav}</h5>
                     <ul className={cls.navList}>
                         {
-                            navData.map(({link, title, id}) => (
+                            contacts.navData.map(({link, title, id}) => (
                                 <li key={id}>
                                     <NavHashLink to={link}>{title}</NavHashLink>
                                 </li>
@@ -67,7 +40,7 @@ const Contacts = () => {
                     </ul>
                 </div>
                 <div className='col-lg-4'>
-                    <h5 className={cls.title}>Социальные сети</h5>
+                    <h5 className={cls.title}>{contacts.social}</h5>
                     <ul className={cls.socialList}>
                         {
                             socialSuccess ? (

@@ -8,73 +8,84 @@ import Spinner from '../Spinner';
 const Pricing = () => {
     const dispatch = useDispatch();
     const {pricingData, pricingSuccess} = useSelector(s => s.pricing);
+    const {selectedLang: {pricing}, selectedLangSlug} = useSelector(s => s.langs);
 
     useEffect(() => {
         dispatch(pricingRequest())
     }, [dispatch])
 
-    console.log('PRICE =>', pricingData);
-    console.log('PRICE SUCCESS =>', pricingSuccess);
-
     return (
         <div className={cls.root} id="prices">
-            <Title subTitle='Наши цены' title='Тарифы по лучшим ценам' />
+            <Title subTitle={pricing.subTitle} title={pricing.title} />
             <div className={cls.pricingContent}>
                 <div className={cls.pricingSection}>
 
                     {
                         pricingSuccess ? (
-                            pricingData.map(item => (
-                                <div key={item.id}>
-                                    <h1 className={cls.sectionTitle}>{item.name}</h1>
-                                    <div className={cls.pricingList}>
-                                        {
-                                            item.data_tarifs.map(val => (
-                                                <div key={val.id} className={cls.pricingCard + ' card'}>
-                                                    <h5>{val.name}</h5>
-                                                    <div className={cls.price}>
-                                                        <p><span>$</span>{val.price}</p>
+                            <div className={`${cls.accordion} accordion accordion-flush`} id="accordionContainer">
+                                {
+                                    selectedLangSlug === 'RU' ? (
+                                        pricingData.map(({id, name_ru, data_tarifs}, i) => (
+                                            <div key={id} className='accordion-item'>
+                                                <h2 className="accordion-header" id={`flush-heading-${i}`}>
+                                                    <button className={`accordion-button collapsed`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${i}`} aria-expanded="false" aria-controls="flush-collapseOne">
+                                                        <span className={cls.productSectionTitle}>{name_ru}</span>
+                                                    </button>
+                                                </h2>
+                                                <div id={`flush-collapse-${i}`} className={`accordion-collapse collapse ${i === 0 ? 'show' : null }`} aria-labelledby={`flush-heading-${i}`} data-bs-parent="#accordionContainer">
+                                                    <div className="accordion-body">
+                                                        <table className="table table-hover">
+                                                            <tbody>
+                                                                {
+                                                                    data_tarifs.map((item) => (
+                                                                        <tr className='text' key={item.id}>
+                                                                            <td><span className={cls.productTitle}>{item.name_ru}</span></td>
+                                                                            <td className={cls.productPrice}>{item.price_ru}</td>
+                                                                        </tr>
+                                                                    ))
+                                                                }
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
-                            ))
+                                            </div>
+                                        ))
+                                    ) : (
+                                        pricingData.map(({id, name_en, data_tarifs}, i) => (
+                                            <div key={id} className='accordion-item'>
+                                                <h2 className="accordion-header" id={`flush-heading-${i}`}>
+                                                    <button className={`accordion-button collapsed`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${i}`} aria-expanded="false" aria-controls="flush-collapseOne">
+                                                        <span className={cls.productSectionTitle}>{name_en}</span>
+                                                    </button>
+                                                </h2>
+                                                <div id={`flush-collapse-${i}`} className={`accordion-collapse collapse ${i === 0 ? 'show' : null }`} aria-labelledby={`flush-heading-${i}`} data-bs-parent="#accordionContainer">
+                                                    <div className="accordion-body">
+                                                        <table className="table table-hover">
+                                                            <tbody>
+                                                                {
+                                                                    data_tarifs.map((item) => (
+                                                                        <tr className='text' key={item.id}>
+                                                                            <td><span className={cls.productTitle}>{item.name_en}</span></td>
+                                                                            <td className={cls.productPrice}>{item.price_en}</td>
+                                                                        </tr>
+                                                                    ))
+                                                                }
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))
+                                    )
+                                    
+                                }
+                            </div>
                         ) : pricingSuccess === false ? (
                             null
                         ) : (
                             <Spinner />
                         )
                     }
-
-                    {/* <h1 className={cls.sectionTitle}>Поклейка FNSKU</h1>
-                    <div className={cls.pricingList}>
-                        <div className={cls.pricingCard + ' card'}>
-                            <h5>Поклейка FNSKU over 1000 единиц</h5>
-                            <div className={cls.price}>
-                                <p><span>$</span>0.40</p>
-                            </div>
-                        </div>
-                        <div className={cls.pricingCard + ' card'}>
-                            <h5>Поклейка FNSKU 700-999 единиц</h5>
-                            <div className={cls.price}>
-                                <p><span>$</span>0.45</p>
-                            </div>
-                        </div>
-                        <div className={cls.pricingCard + ' card'}>
-                            <h5>Поклейка FNSKU 200-699 единиц</h5>
-                            <div className={cls.price}>
-                                <p><span>$</span>0.55</p>
-                            </div>
-                        </div>
-                        <div className={cls.pricingCard + ' card'}>
-                            <h5>Поклейка FNSKU 100-199 единиц</h5>
-                            <div className={cls.price}>
-                                <p><span>$</span>0.65</p>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </div>

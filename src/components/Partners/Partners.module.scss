@@ -1,8 +1,43 @@
 .root{
-    .slideItem{
-        text-align: center;
+    .payContainer{
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem 0;
         img{
-            width: 70%;
+            width: 150px;
         }
     }
 }
+
+
+@media screen and (max-width: 1100px) {
+    .payContainer{
+        img{
+            width: 100px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .payContainer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: 0 0 50% !important;
+        margin: 1.5rem 0 !important;
+        div{
+            width: 50% !important;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .payContainer{
+        img{
+            width: 80px !important;
+        }
+    }
+}
+

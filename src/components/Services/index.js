@@ -12,6 +12,7 @@ import Back from '../../assets/services/back.jpg';
 import Storage from '../../assets/services/storage.jpg';
 import Vykup from '../../assets/services/vykup.jpg';
 import Title from '../Title';
+import { useSelector } from 'react-redux';
 
 const carouselData = [
     {
@@ -66,9 +67,11 @@ const carouselData = [
 
 SwiperCore.use([Autoplay]);
 const Services = () => {
+    const {selectedLang: {services}} = useSelector(s => s.langs);
+
     return (
         <div className={cls.root} id='services'>
-            <Title subTitle='Наши услуги' title='Что мы предлагаем вам' />
+            <Title subTitle={services.subTitle} title={services.title} />
             <div className={cls.carousel}>
                 <Swiper
                     slidesPerView={3}
