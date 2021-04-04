@@ -13,13 +13,16 @@ $dark: #183650;
             margin-left: auto;
             li{
                 margin: 0 1rem;
-                a{
+                a, p{
                     color: $light;
                     font-size: 1.6rem;
                     font-weight: 500;
                     &:hover{
                         color: $main;
                     }
+                }
+                p{
+                    cursor: pointer;
                 }
             }
             .flag{
@@ -50,7 +53,7 @@ $dark: #183650;
 // Media
 
 @media screen and (max-width: 1440px) {
-    .navList li a{
+    .navList li a, .navList li p{
         font-size: 1.4rem !important;
     }
 }

@@ -58,7 +58,7 @@ const Contacts = () => {
                     </ul>
                 </div>
 
-                <p className={cls.copyright}>{currentYear} © Fast Prep Usa.</p>
+                <p className={cls.copyright}>2019 - {currentYear} © Fast Prep Usa.</p>
             </div>
         </div>
     )

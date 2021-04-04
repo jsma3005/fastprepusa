@@ -1,7 +1,7 @@
 import cls from './NavBar.module.scss';
 import { NavHashLink, HashLink } from 'react-router-hash-link';
-import RuFlag from '../../assets/russia.svg';
-import EnFlag from '../../assets/usa.svg';
+// import RuFlag from '../../assets/russia.svg';
+// import EnFlag from '../../assets/usa.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { enLangAction, ruLangAction } from '../../redux/actions/languageAction';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -9,7 +9,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 const NavBar = () => {
     const dispatch = useDispatch();
     const {selectedLangSlug, selectedLang: {navbar}} = useSelector(s => s.langs);
-    const FLAG = selectedLangSlug === 'RU' ? EnFlag : RuFlag;
+    // const FLAG = selectedLangSlug === 'RU' ? EnFlag : RuFlag;
+    const LANG_TITLE = selectedLangSlug === 'RU' ? 'Русский' : 'English'
 
     const handleChangeLang = () => {
         if(selectedLangSlug === 'RU'){
@@ -59,8 +60,8 @@ const NavBar = () => {
                             <li onClick={e => {
                                 handleChangeLang();
                                 closeCollase(e);
-                            }} className={`${cls.flag} nav-item`}>
-                                <img src={FLAG} alt='Flag' />
+                            }} className='nav-item'>
+                                <p className='nav-link'>{LANG_TITLE}</p>
                             </li>
                         </ul>
                     </div>

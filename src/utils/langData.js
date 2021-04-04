@@ -75,7 +75,7 @@ export const ruLangData = {
             {
                 id: 2,
                 title: 'О нас',
-                link: '/about'
+                link: '/about/#navigation'
             },
             {
                 id: 3,

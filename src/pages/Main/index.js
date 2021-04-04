@@ -4,6 +4,7 @@ import Map from '../../components/Map'
 import Partners from '../../components/Partners'
 import Pricing from '../../components/Pricing'
 import Services from '../../components/Services'
+import Social from '../../components/Social'
 
 const Main = () => {
     return (
@@ -12,6 +13,7 @@ const Main = () => {
             <Feautures />
             <Services />
             <Pricing />
+            <Social />
             <Partners />
             <Map />
         </div>
