@@ -63,7 +63,6 @@ const Header = () => {
                 }
             </Swiper>
             <div className={cls.content}>
-                <h5>{header.inventory}</h5>
                 <h1>
                     <TextTransition
                         text={ header.texts[index % header.texts.length] }

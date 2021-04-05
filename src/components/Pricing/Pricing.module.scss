@@ -9,8 +9,9 @@ $secondary: #797E82;
         .pricingSection{
             .accordion{
                 padding: 1rem 5rem;
-                .productSectionTitle{
-                    font-size: 1.4rem;
+                .pricingSectionTitle{
+                    text-align: center;
+                    margin: 2rem 0;
                     color: $dark;
                 }
                 .productTitle{

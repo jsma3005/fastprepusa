@@ -15,8 +15,6 @@ $secondary: #797E82;
             height: 65vh;
             top: 0;
             left: 0;
-            // background: #0b2b32;
-            // opacity: .6;
             background-color: rgba(0,0,0,0.6);
         }
         .content{
@@ -146,5 +144,36 @@ $secondary: #797E82;
 @media screen and(max-width: 420px) {
     .about{
         padding: 4rem 1rem !important;
+    }
+}
+
+
+// Height
+@media screen and(max-height: 580px) {
+    .about{
+        padding: 2rem 3rem 0rem 3rem !important;
+    }
+    .misson{
+        margin-bottom: 0 !important;
+    }
+}
+
+@media screen and(max-height: 550px) {
+    .head{
+        height: 75vh !important;
+        &::before{
+            height: 75vh !important;
+        }
+    }
+}
+
+@media screen and(max-height: 400px) {
+    .content{
+        h5{
+            font-size: 1.5rem !important;
+        }
+        h1{
+            font-size: 3.5rem !important;
+        }
     }
 }

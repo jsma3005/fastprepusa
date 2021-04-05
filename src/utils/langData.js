@@ -16,7 +16,6 @@ export const ruLangData = {
             "Безопасный",
             "Лучший",
         ],
-        inventory: 'Онлайн инвентарь',
         title: 'Преп центр',
         subTitle: 'в США'
     },
@@ -118,7 +117,6 @@ export const enLangData = {
             "Safe",
             "Best",
         ],
-        inventory: 'Online item inventory',
         title: 'Prep center',
         subTitle: 'in USA'
     },

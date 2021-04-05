@@ -110,3 +110,9 @@ $secondary: #797E82;
         margin-top: -120px !important;
     }
 }
+
+@media screen and(max-height: 580px) {
+    .root{
+        margin-top: 50px !important;
+    }
+}
