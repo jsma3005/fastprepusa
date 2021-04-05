@@ -75,6 +75,7 @@ $secondary: #797E82;
 
         .misson{
             margin-top: 5rem;
+            margin-bottom: 3rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -100,5 +101,50 @@ $secondary: #797E82;
                 margin: 1rem 3rem;
             }
         }
+    }
+}
+
+
+@media screen and(max-width: 992px) {
+    .aboutTitle{
+        text-align: center !important;
+        div{
+            margin: 1rem auto 2rem auto !important;
+        }
+    }
+
+    .misson{
+        flex-direction: column !important;
+    }
+}
+
+
+@media screen and(max-width: 550px) {
+    .content{
+        h5{
+            font-size: 1.5rem !important;
+        }
+        h1{
+            font-size: 4rem !important;
+        }
+        .line{
+            width: 100px;
+            height: 3px;
+            background-color: $main;
+        }
+    }
+
+    .tilt{
+        width: 100% !important;
+    }
+
+    .about{
+        padding: 4rem 1.5rem !important;
+    }
+}
+
+@media screen and(max-width: 420px) {
+    .about{
+        padding: 4rem 1rem !important;
     }
 }

@@ -27,3 +27,37 @@ $secondary: #797E82;
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .accordion{
+        padding: 1rem 3rem !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .accordion{
+        padding: 1rem !important;
+    }
+    .productSectionTitle{
+        font-size: 1.2rem !important;
+    }
+    .productTitle, .productPrice{
+        font-size: .9rem !important;
+    }
+    .accordionBody{
+        padding: .9rem !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .accordionBody{
+        tr{
+            display: flex !important;
+            flex-direction: column !important;
+            text-align: center !important;
+            td{
+                text-align: center !important;
+            }
+        }
+    }
+}

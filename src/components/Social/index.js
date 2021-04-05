@@ -2,10 +2,16 @@ import { useSelector } from 'react-redux';
 import Spinner from '../Spinner';
 import Title from '../Title';
 import cls from './Social.module.scss';
+import { useMediaQuery } from 'react-responsive'
 
 const Social = () => {
     const {socialData, socialSuccess} = useSelector(s => s.social);
-    console.log(socialData);
+    const isSmall = useMediaQuery({ query: '(max-width: 500px)' });
+
+    const splittedStr = str => {
+        return str.split('');
+    }
+
 
     return (
         <div className={cls.root}>
@@ -18,13 +24,24 @@ const Social = () => {
                                 <div className={cls.icon}>
                                     <img alt='Social' src={image_icon} />
                                 </div>
-                                <span><a target="_blank" rel='noreferrer' href={link}>{title}</a></span>
+                                <span>
+                                    {
+                                        isSmall ? (
+                                            <a href={link} target="_blank" rel='noreferrer' className={cls.splittedContainer}>
+                                                {splittedStr(title).map((item, index) => (
+                                                    <span key={index} className={cls.splittedSpan}>{item}</span>
+                                                ))}
+                                            </a>
+                                        ) : (
+                                            <a target="_blank" rel='noreferrer' href={link}>{title}</a>
+                                        )
+                                    }
+                                </span>
                             </div>
                         ))
                     ) : (
                         <Spinner />
                     )
-                    
                 }
             </div>
         </div>

@@ -34,13 +34,13 @@ const About = () => {
                 <div className={cls.misson}>
                     <Tilt className={cls.tilt}>
                         <div className={cls.missionLeft}>
-                            <h1>{about.mission}</h1>
+                            <h1>{about.ourMission}</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend semper molestie. Etiam urna turpis, eleifend molestie aliquet in, interdum sed est. Pellentesque porta neque eget lacinia accumsan. Ut a blandit dolor.</p>
                         </div>
                     </Tilt>
                     <Tilt className={cls.tilt}>
                         <div className={cls.missionRight}>
-                            <h1>{about.goal}</h1>
+                            <h1>{about.ourGoal}</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend semper molestie. Etiam urna turpis, eleifend molestie aliquet in, interdum sed est. Pellentesque porta neque eget lacinia accumsan. Ut a blandit dolor.</p>
                         </div>
                     </Tilt>

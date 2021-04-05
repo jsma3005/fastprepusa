@@ -18,7 +18,7 @@ const Contacts = () => {
     return (
         <div id="contacts" className={cls.root}>
             <div className='row'>
-                <div className='col-lg-4'>
+                <div className='col-lg-4 col-md-6'>
                     <h5 className={cls.title}>Fast Prep USA</h5>
                     <ul className={cls.contactsList}>
                         <li><b>{contacts.address}:</b> <HashLink to="/#map">7420 Avenida Del Mar, unit 2601</HashLink></li>
@@ -27,7 +27,7 @@ const Contacts = () => {
                         <li><b>{contacts.timeTitle}:</b> <span>{contacts.time}</span></li>
                     </ul>
                 </div>
-                <div className='col-lg-4'>
+                <div className='col-lg-4 col-md-6'>
                     <h5 className={cls.title}>{contacts.nav}</h5>
                     <ul className={cls.navList}>
                         {
@@ -39,7 +39,7 @@ const Contacts = () => {
                         }
                     </ul>
                 </div>
-                <div className='col-lg-4'>
+                <div className='col-lg-4 col-md-12'>
                     <h5 className={cls.title}>{contacts.social}</h5>
                     <ul className={cls.socialList}>
                         {

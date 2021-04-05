@@ -60,7 +60,7 @@ const NavBar = () => {
                             <li onClick={e => {
                                 handleChangeLang();
                                 closeCollase(e);
-                            }} className='nav-item'>
+                            }} className={cls.lang + ' nav-item'}>
                                 <p className='nav-link'>{LANG_TITLE}</p>
                             </li>
                         </ul>

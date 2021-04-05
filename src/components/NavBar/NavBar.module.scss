@@ -88,6 +88,10 @@ $dark: #183650;
         li{
             margin: .3rem 0 !important;
         }
+        .lang p{
+            color: $dark !important;
+            font-size: 1.2rem !important;
+        }
     }
     .collapse{
         margin-top: 1rem;
@@ -110,5 +114,11 @@ $dark: #183650;
 @media screen and (max-width: 550px){
     .burger{
         font-size: 2rem !important;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .burger{
+        font-size: 1.8rem !important;
     }
 }

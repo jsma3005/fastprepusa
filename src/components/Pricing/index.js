@@ -33,7 +33,7 @@ const Pricing = () => {
                                                     </button>
                                                 </h2>
                                                 <div id={`flush-collapse-${i}`} className={`accordion-collapse collapse ${i === 0 ? 'show' : null }`} aria-labelledby={`flush-heading-${i}`} data-bs-parent="#accordionContainer">
-                                                    <div className="accordion-body">
+                                                    <div className={cls.accordionBody + " accordion-body"}>
                                                         <table className="table table-hover">
                                                             <tbody>
                                                                 {

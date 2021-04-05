@@ -5,6 +5,7 @@ $secondary: #797E82;
 
 
 .root{
+    margin-top: -160px;
     .carousel{
         width: 80%;
         margin: 0 auto;
@@ -32,5 +33,80 @@ $secondary: #797E82;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .root{
+        .carousel{
+            .slide{
+                .card{
+                    .cardBody{
+                        h5{
+                            height: 70px !important;
+                        }
+                        height: 300px !important;
+                        padding: 1.5rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .root{
+        .carousel{
+            .slide{
+                width: 300px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .root{
+        .carousel{
+            .slide{
+                width: 50% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .root{
+        .carousel{
+            width: 90% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .root{
+        .carousel{
+            .slide{
+                width: 60% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .root{
+        .carousel{
+            .slide{
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+
+// Height
+@media screen and(max-height: 650px) {
+    .root{
+        margin-top: -120px !important;
     }
 }

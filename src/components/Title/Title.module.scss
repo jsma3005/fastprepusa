@@ -25,3 +25,24 @@ $secondary: #797E82;
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .root{
+        .titleContent{
+            padding: 3rem 1.5rem !important;
+            text-align: center !important;
+            h5{
+                // text-align: center;
+            }
+            h1{
+                // font-weight: bold;
+                // text-transform: uppercase;
+                // color: $dark;
+            }
+            .line{
+                margin: 1rem auto .5rem auto !important;
+                width: 50% !important;
+            }
+        }
+    }
+}

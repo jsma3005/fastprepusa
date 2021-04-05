@@ -115,6 +115,14 @@ $main:#3FA2A2;
     }
 }
 
+@media screen and (max-width: 650px) {
+    .root{
+        .img{
+            height: 80vh !important;
+        }
+    }
+}
+
 @media screen and (max-width: 600px) {
     .content{
         h1{

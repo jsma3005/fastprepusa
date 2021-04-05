@@ -16,7 +16,7 @@ const Feautures = () => {
                         {
                             feautures.feauturesList.map(item => (
                                 <div className={cls.feauturesContainer} key={item.id}>
-                                    <div>
+                                    <div className={cls.iconContainer}>
                                         {item.icon}
                                     </div>
                                     <div>

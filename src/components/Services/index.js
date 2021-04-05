@@ -13,6 +13,7 @@ import Storage from '../../assets/services/storage.jpg';
 import Vykup from '../../assets/services/vykup.jpg';
 import Title from '../Title';
 import { useSelector } from 'react-redux';
+import { useMediaQuery } from 'react-responsive'
 
 const carouselData = [
     {
@@ -68,13 +69,15 @@ const carouselData = [
 SwiperCore.use([Autoplay]);
 const Services = () => {
     const {selectedLang: {services}} = useSelector(s => s.langs);
+    const isSmall = useMediaQuery({ query: '(max-width: 550px)' });
+    const isLarge = useMediaQuery({ query: '(min-width: 1400px)' });
 
     return (
         <div className={cls.root} id='services'>
             <Title subTitle={services.subTitle} title={services.title} />
             <div className={cls.carousel}>
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={isSmall ? 1 : isLarge ? 4 : 3}
                     spaceBetween={50}
                     freeMode={true}
                     loop={true}
