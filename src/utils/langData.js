@@ -177,7 +177,7 @@ export const enLangData = {
             {
                 id: 2,
                 title: 'About',
-                link: '/about'
+                link: '/about/#navigation'
             },
             {
                 id: 3,
