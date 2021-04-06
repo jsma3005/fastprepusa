@@ -48,7 +48,8 @@ export const ruLangData = {
     },
     pricing: {
         title: 'Тарифы по лучшим ценам',
-        subTitle: 'Наши цены'
+        subTitle: 'Наши цены',
+        link: 'Скачать прайс лист'
     },
     partners: {
         title: 'Мы поддерживаем',
@@ -149,7 +150,8 @@ export const enLangData = {
     },
     pricing: {
         title: 'Tariffs at the best prices',
-        subTitle: 'Our pricing'
+        subTitle: 'Our pricing',
+        link: 'Download price list'
     },
     partners: {
         title: 'We support',

@@ -87,7 +87,7 @@ const Pricing = () => {
                     {
                         priceBtn ? (
                             <div className={cls.pricingDownload}>
-                                <a target="_blank" rel="noreferrer" href={priceBtnLink} className='btn'>Скачать прайс лист</a>
+                                <a target="_blank" rel="noreferrer" href={priceBtnLink} className='btn'>{pricing.link}</a>
                             </div>
                         ) : null
                     }
