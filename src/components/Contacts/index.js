@@ -8,7 +8,6 @@ import cls from './Contacts.module.scss';
 const Contacts = () => {
     const dispatch = useDispatch();
     const {socialData, socialSuccess} = useSelector(s => s.social);
-    const currentYear = new Date().getFullYear();
     const {selectedLang: {contacts}} = useSelector(s => s.langs);
 
     useEffect(() => {
@@ -58,7 +57,7 @@ const Contacts = () => {
                     </ul>
                 </div>
 
-                <p className={cls.copyright}>2019 - {currentYear} © Fast Prep Usa.</p>
+                <p className={cls.copyright}>2019 © Fast Prep Usa.</p>
             </div>
         </div>
     )

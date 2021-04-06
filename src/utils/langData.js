@@ -13,8 +13,8 @@ export const ruLangData = {
     header: {
         texts: [
             "Надежный",
-            "Безопасный",
-            "Лучший",
+            "Быстрый",
+            "Качественный",
         ],
         title: 'Преп центр',
         subTitle: 'в США'
@@ -114,8 +114,8 @@ export const enLangData = {
     header: {
         texts: [
             "Reliable",
-            "Safe",
-            "Best",
+            "Fast",
+            "Qualitative",
         ],
         title: 'Prep center',
         subTitle: 'in USA'
