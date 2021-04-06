@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { pricingRequest } from '../../redux/reducers/pricing';
 import Title from '../Title';
@@ -9,9 +9,19 @@ const Pricing = () => {
     const dispatch = useDispatch();
     const {pricingData, pricingSuccess} = useSelector(s => s.pricing);
     const {selectedLang: {pricing}, selectedLangSlug} = useSelector(s => s.langs);
+    const [priceBtn, setPriceBtn] = useState(false);
+    const [priceBtnLink, setPriceBtnLink] = useState(null);
 
     useEffect(() => {
         dispatch(pricingRequest())
+        fetch('http://74.208.251.128/api/linkprice/')
+        .then(res => res.json())
+        .then(r => {
+            setPriceBtnLink(r[0].linkprice);
+            setPriceBtn(true)
+        }).catch(() => {
+            setPriceBtn(false)
+        })
     }, [dispatch])
 
     return (
@@ -74,6 +84,14 @@ const Pricing = () => {
                             <Spinner />
                         )
                     }
+                    {
+                        priceBtn ? (
+                            <div className={cls.pricingDownload}>
+                                <a href={priceBtnLink} className='btn'>Скачать прайс лист</a>
+                            </div>
+                        ) : null
+                    }
+                    
                 </div>
             </div>
         </div>

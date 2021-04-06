@@ -29,7 +29,6 @@ const NavBar = () => {
         collapse.classList.remove('show');
     }
 
-
     return (
         <div className={cls.root} id="navigation">
             <nav className="navbar navbar-expand-lg">

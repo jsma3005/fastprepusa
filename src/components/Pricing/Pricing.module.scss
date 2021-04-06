@@ -27,6 +27,15 @@ $secondary: #797E82;
             }
         }
     }
+    .pricingDownload{
+        text-align: center;
+        margin-top: 1rem;
+        a{
+            background-color: $main;
+            padding: 1rem 2rem;
+            color: $light;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {

@@ -1,0 +1,25 @@
+$light: #efefef;
+$dark: #183650;
+
+.root{
+    position: fixed;
+    top: 80%;
+    right: 3%;
+    padding: 15px;
+    background: $dark;
+    z-index: 100;
+    border-radius: 5px;
+    .icon{
+        font-size: 2rem;
+        color: $light;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .root{
+        padding: 10px;
+        .icon{
+            font-size: 1.5rem;
+        }
+    }
+}
