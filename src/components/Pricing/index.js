@@ -14,7 +14,7 @@ const Pricing = () => {
 
     useEffect(() => {
         dispatch(pricingRequest())
-        fetch('http://74.208.251.128/api/linkprice/')
+        fetch('http://fastprepusa.com/api/linkprice/')
         .then(res => res.json())
         .then(r => {
             setPriceBtnLink(r[0].linkprice);

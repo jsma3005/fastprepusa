@@ -1,5 +1,5 @@
 import { API } from "./api";
-import { partnersRoutes, pricingRoutes, socialRoutes } from "./routes";
+import { partnersRoutes, pricingRoutes, servicesRoutes, socialRoutes } from "./routes";
 
 export const pricingData = () => API.get({
     url: pricingRoutes,
@@ -17,6 +17,13 @@ export const partnersData = () => API.get({
 
 export const socialData = () => API.get({
     url: socialRoutes,
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+
+export const servicesData = () => API.get({
+    url: servicesRoutes,
     headers: {
         'Content-Type': 'application/json'
     }
