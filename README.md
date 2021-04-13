@@ -1,7 +1,10 @@
 # Проект для преп центра в США
 
 ## Какие технологии были использованы в данном проекте:
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### - React
+### - Redux
+### - Redux Thunk
+### - React Router Dom
 
 ## Available Scripts
 
