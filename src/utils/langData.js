@@ -51,6 +51,10 @@ export const ruLangData = {
         subTitle: 'Наши цены',
         link: 'Скачать прайс лист'
     },
+    social: {
+        title: 'Напишите нам',
+        subTitle: 'Связь с нами'
+    },
     partners: {
         title: 'Мы поддерживаем',
         subTitle: 'Оплата'
@@ -152,6 +156,10 @@ export const enLangData = {
         title: 'Tariffs at the best prices',
         subTitle: 'Our pricing',
         link: 'Download price list'
+    },
+    social: {
+        title: 'Write to us',
+        subTitle: 'Contacts us'
     },
     partners: {
         title: 'We support',

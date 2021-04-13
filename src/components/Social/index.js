@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 
 const Social = () => {
     const {socialData, socialSuccess} = useSelector(s => s.social);
+    const {selectedLang: {social}} = useSelector(s => s.langs);
     const isSmall = useMediaQuery({ query: '(max-width: 500px)' });
 
     const splittedStr = str => {
@@ -15,7 +16,7 @@ const Social = () => {
 
     return (
         <div className={cls.root}>
-            <Title title='Напишите нам' subTitle='Связь с нами' />
+            <Title title={social.title} subTitle={social.subTitle} />
             <div className={cls.wrapper}>
                 {
                     socialSuccess ? (
