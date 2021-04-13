@@ -1,6 +1,6 @@
 # Проект для преп центра в США
-# Getting Started with Create React App
 
+## Какие технологии были использованы в данном проекте:
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
