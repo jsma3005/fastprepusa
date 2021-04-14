@@ -13,7 +13,7 @@ $dark: #183650;
             height: 100px;
             width: 100px;
             float: left;
-            margin: 0 1rem;
+            margin: 1rem;
             background: $light;
             border-radius: 50px;
             cursor: pointer;
@@ -49,39 +49,25 @@ $dark: #183650;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .button{
-        display: inline-block;
-        height: 100px;
-        width: 100px;
-        float: left;
-        margin: 0 1rem;
-        background: $light;
-        border-radius: 50px;
-        cursor: pointer;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
-        transition: all 0.3s ease-out;
-        overflow: hidden;
-        &:hover{
-            width: 100px !important;
-            height: 350px !important;
-        }
-    } 
-
-    .splittedContainer{
-        display: flex;
-        flex-direction: column;
-        .splittedSpan{
-            line-height: 1.2 !important;
-            text-align: center !important;
-            margin-left: 0 !important;
-        }
+@media screen and (max-width: 775px) {
+    .wrapper{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        flex: 0 0 50% !important;
     }
 }
 
-@media screen and (max-width: 420px) {
-    .wrapper{
-        flex-wrap: wrap !important;
-        flex: 0 0 50% !important;
+@media screen and (max-width: 500px) {
+    .button{
+        height: 100px;
+        width: 100px;
+
+        span{
+            line-height: 0px !important;
+            margin-left: 0px !important;
+            a{
+                text-decoration: none;
+            }
+        }
     }
 }
