@@ -41,12 +41,15 @@ const Pricing = () => {
                                                     <h2>{name_ru}</h2>
                                                 </div>
                                                 <table className="table table-hover table-striped">
-                                                    <tbody>
+                                                    <tbody className={cls.tBody}>
                                                         {
                                                             data_tarifs.map((item) => (
-                                                                <tr className='text' key={item.id}>
-                                                                    <td><span className={cls.productTitle}>{item.name_ru}</span></td>
+                                                                <tr className={cls.tr} key={item.id}>
+                                                                    <td className={cls.productTitleContainer}><span className={cls.productTitle}>{item.name_ru}</span></td>
                                                                     <td className={cls.productPrice}>{item.price_ru}</td>
+                                                                    {
+                                                                        item.cause_time_ru ? <td className={cls.productTime}>{item.cause_time_ru}</td> : <td className={cls.productTime}>не указано</td>
+                                                                    }
                                                                 </tr>
                                                             ))
                                                         }
@@ -61,12 +64,15 @@ const Pricing = () => {
                                                     <h2>{name_en}</h2>
                                                 </div>
                                                 <table className="table table-hover table-striped">
-                                                    <tbody>
+                                                    <tbody className={cls.tBody}>
                                                         {
                                                             data_tarifs.map((item) => (
-                                                                <tr className='text' key={item.id}>
-                                                                    <td><span className={cls.productTitle}>{item.name_en}</span></td>
+                                                                <tr className={cls.tr} key={item.id}>
+                                                                    <td className={cls.productTitleContainer}><span className={cls.productTitle}>{item.name_en}</span></td>
                                                                     <td className={cls.productPrice}>{item.price_en}</td>
+                                                                    {
+                                                                        item.cause_time_en ? <td className={cls.productTime}>{item.cause_time_en}</td> : <td className={cls.productTime}>not indicated</td>
+                                                                    }
                                                                 </tr>
                                                             ))
                                                         }

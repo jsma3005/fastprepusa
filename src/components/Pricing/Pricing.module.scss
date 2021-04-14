@@ -24,6 +24,10 @@ $secondary: #797E82;
                     text-align: right;
                     font-weight: 500;
                 }
+                .productTime{
+                    text-align: right;
+                    padding-right: 1rem;
+                }
             }
         }
     }
@@ -38,13 +42,13 @@ $secondary: #797E82;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .accordion{
         padding: 1rem 3rem !important;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .accordion{
         padding: 1rem !important;
     }
@@ -59,15 +63,34 @@ $secondary: #797E82;
     }
 }
 
-@media screen and (max-width: 400px) {
-    .accordionBody{
+@media screen and (max-width: 650px) {
+    .tBody{
+        display: block;
+        width: 100%;
         tr{
-            display: flex !important;
-            flex-direction: column !important;
-            text-align: center !important;
-            td{
+            display: flex;
+            flex-wrap: wrap;
+            .productTitleContainer{
+                flex-basis: 100%;
+                text-align: center;
+            }
+            .productPrice, .productTime{
+                flex-basis: 50%;
                 text-align: center !important;
             }
         }
     }
 }
+
+// @media screen and (max-width: 400px) {
+//     .accordionBody{
+//         tr{
+//             display: flex !important;
+//             flex-direction: column !important;
+//             text-align: center !important;
+//             td{
+//                 text-align: center !important;
+//             }
+//         }
+//     }
+// }
