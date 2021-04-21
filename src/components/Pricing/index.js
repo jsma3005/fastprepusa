@@ -26,7 +26,7 @@ const Pricing = () => {
 
     return (
         <div className={cls.root} id="prices">
-            <Title subTitle={pricing.subTitle} title={pricing.title} />
+            <Title subTitle={pricing.subTitle} title={pricing.title} text={pricing.titleText} />
             <div className={cls.pricingContent}>
                 <div className={cls.pricingSection}>
 

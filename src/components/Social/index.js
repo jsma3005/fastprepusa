@@ -16,7 +16,7 @@ const Social = () => {
 
     return (
         <div className={cls.root}>
-            <Title title={social.title} subTitle={social.subTitle} />
+            <Title title={social.title} subTitle={social.subTitle} text={social.titleText} />
             <div className={cls.wrapper}>
                 {
                     socialSuccess ? (

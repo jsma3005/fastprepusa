@@ -27,6 +27,19 @@ const About = () => {
                         <br />
                         <p>{about.text2}</p>
                         <p>{about.text3}</p>
+                        <p>{about.statisticList.title}</p>
+                        <ul className={cls.statisticList}>
+                            <li>
+                                {about.statisticList.list1}
+                            </li>
+                            <li>
+                                {about.statisticList.list2}
+                            </li>
+                            <li>
+                                {about.statisticList.list3}
+                            </li>
+                        </ul>
+                        <p>{about.statisticList.by}</p>
                     </div>
                     <div className={cls.aboutRight + ' col-lg-6'}>
                         <img src={AboutContent} alt='About content' />

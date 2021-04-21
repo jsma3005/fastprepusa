@@ -49,19 +49,23 @@ export const ruLangData = {
     pricing: {
         title: 'Тарифы по лучшим ценам',
         subTitle: 'Наши цены',
-        link: 'Скачать прайс лист'
+        link: 'Скачать прайс лист',
+        titleText: 'Мы сделали все для того, чтобы наши цены были максимально демократичны и прозрачны. Никаких скрытых платежей!'
     },
     social: {
         title: 'Напишите нам',
-        subTitle: 'Связь с нами'
+        subTitle: 'Связь с нами',
+        titleText: 'Будем рады дать подробную консультацию и обсудить все детали. Напишите нам!'
     },
     partners: {
         title: 'Мы поддерживаем',
-        subTitle: 'Оплата'
+        subTitle: 'Оплата',
+        titleText: 'Работаем со всеми основными платежными системами, принимаем кредитные и дебетовые карты американских и европейских банков, оформляем переводы с карты на карту.'
     },
     map: {
         title: 'Где мы находимся',
-        subTitle: 'Склад на карте'
+        subTitle: 'Склад на карте',
+        titleText: 'Нас легко найти. Мы всего в 40 минутах от склада Amazon.'
     },
     contacts: {
         address: 'Адрес',
@@ -107,7 +111,14 @@ export const ruLangData = {
         ourGoal: 'Наша цель',
         text1: 'Помогаем продавцам из России и стран СНГ легко и комфортно работать на Amazon, Ebay, Etsy и других торговых площадках США.',
         text2: 'Все, что нужно для успешной торговли в США: продавайте и зарабатывайте еще больше, а всю обработку товаров мы возьмем на себя!',
-        text3: 'Мы всегда рады новым клиентам и делаем все, чтобы они стали постоянными!'
+        text3: 'Мы всегда рады новым клиентам и делаем все, чтобы они стали постоянными!',
+        statisticList: {
+            title: 'Помогаем расти и масштабироваться:',
+            list1: '+44% - Среднемесячное повышение объемов продаж.',
+            list2: '+35% - Среднее увеличение частоты заказов.',
+            list3: '+12% - Средняя оптимизация расходов на доставку заказов. *',
+            by: '* По данным постоянных партнеров Fast Prep USA'
+        }
     }
 }
 
@@ -158,19 +169,23 @@ export const enLangData = {
     pricing: {
         title: 'Tariffs at the best prices',
         subTitle: 'Our pricing',
-        link: 'Download price list'
+        link: 'Download price list',
+        titleText: 'We have done everything to ensure that our prices are as democratic and transparent as possible. No hidden fees!'
     },
     social: {
         title: 'Write to us',
-        subTitle: 'Contacts us'
+        subTitle: 'Contacts us',
+        titleText: 'We will be happy to provide detailed advice and discuss all the details. Write to us!'
     },
     partners: {
         title: 'We support',
-        subTitle: 'Payment'
+        subTitle: 'Payment',
+        titleText: 'We work with all major payment systems, accept credit and debit cards from American and European banks, and arrange card-to-card transfers.'
     },
     map: {
         title: 'Where we are',
-        subTitle: 'Warehouse on the map'
+        subTitle: 'Warehouse on the map',
+        titleText: 'We are easy to find. We are just 40 minutes from the Amazon warehouse.'
     },
     contacts: {
         address: 'Address',
@@ -216,6 +231,13 @@ export const enLangData = {
         ourGoal: 'Our goal',
         text1: 'Help sellers from Russia and the CIS countries to work easily and comfortably on Amazon, Ebay, Etsy and other US trading platforms.',
         text2: 'Everything you need to trade successfully in the USA: sell and earn even more, and we will take care of all the processing of goods!',
-        text3: 'We are always glad to new clients and do our best to make them permanent!'
+        text3: 'We are always glad to new clients and do our best to make them permanent!',
+        statisticList: {
+            title: 'We help you grow and scale: ',
+            list1: '+44% - Average monthly increase in sales.',
+            list2: '+35% - Average increase in the frequency of orders.',
+            list3: '+12% - Average optimization of order delivery costs. *',
+            by: '* According to regular partners of Fast Prep USA'
+        }
     }
 }

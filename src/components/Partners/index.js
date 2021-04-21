@@ -22,7 +22,7 @@ const Partners = () => {
 
     return (
         <div className={cls.root}>
-            <Title subTitle={partners.subTitle} title={partners.title} />
+            <Title subTitle={partners.subTitle} title={partners.title} text={partners.titleText} />
             {
                 partnersSuccess ? (
                     <div
