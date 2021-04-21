@@ -1,5 +1,5 @@
-import { AiFillSecurityScan } from 'react-icons/ai';
-import { BiSupport } from 'react-icons/bi';
+import { AiOutlineSafety } from 'react-icons/ai';
+import { MdSecurity } from 'react-icons/md';
 import { FaRegThumbsUp } from 'react-icons/fa'
 
 export const ruLangData = {
@@ -24,21 +24,21 @@ export const ruLangData = {
         feauturesList: [
             {
                 id: 1,
-                icon: <AiFillSecurityScan />,
-                title: 'Защита',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nisi optio quasi alias sequi, porro cupiditate adipisci tenetur quaerat neque? Tempore consectetur'
+                icon: <AiOutlineSafety />,
+                title: 'С нами выгодно',
+                description: 'Снижаем процент возвратов, риски получения брака от поставщика и закрытия листинга или аккаунта продавца. Честные тарифы, прозрачное ценообразование, прогрессивная система скидок, бонусы для новых клиентов.'
             },
             {
                 id: 2,
-                icon: <BiSupport />,
-                title: 'Поддержка 24/7',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nisi optio quasi alias sequi, porro cupiditate adipisci tenetur quaerat neque? Tempore consectetur'
+                icon: <MdSecurity />,
+                title: 'С нами надежно',
+                description: 'Многоуровневая система безопасности склада, страхование всех товаров и тщательная проверка персонала. Ваш товар – в надежных руках!'
             },
             {
                 id: 3,
                 icon: <FaRegThumbsUp />,
-                title: 'Качество',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nisi optio quasi alias sequi, porro cupiditate adipisci tenetur quaerat neque? Tempore consectetur'
+                title: 'С нами легко',
+                description: 'Человеческое отношение и профессиональный подход. Отзывчивая и доброжелательная русскоязычная поддержка реагирует на все обращения в течение суток/х часов.'
             }
         ]
     },
@@ -105,6 +105,9 @@ export const ruLangData = {
         we: 'МЫ',
         ourMission: 'Наша миссия',
         ourGoal: 'Наша цель',
+        text1: 'Помогаем продавцам из России и стран СНГ легко и комфортно работать на Amazon, Ebay, Etsy и других торговых площадках США.',
+        text2: 'Все, что нужно для успешной торговли в США: продавайте и зарабатывайте еще больше, а всю обработку товаров мы возьмем на себя!',
+        text3: 'Мы всегда рады новым клиентам и делаем все, чтобы они стали постоянными!'
     }
 }
 
@@ -130,21 +133,21 @@ export const enLangData = {
         feauturesList: [
             {
                 id: 1,
-                icon: <AiFillSecurityScan />,
-                title: 'Protection',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nisi optio quasi alias sequi, porro cupiditate adipisci tenetur quaerat neque? Tempore consectetur'
+                icon: <AiOutlineSafety />,
+                title: 'Profitable',
+                description: "We reduce the percentage of returns, the risks of getting a marriage from a supplier and closing a listing or seller's account. Fair rates, transparent pricing, progressive system of discounts, bonuses for new customers."
             },
             {
                 id: 2,
-                icon: <BiSupport />,
-                title: 'Support 24/7',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nisi optio quasi alias sequi, porro cupiditate adipisci tenetur quaerat neque? Tempore consectetur'
+                icon: <MdSecurity />,
+                title: 'Reliable',
+                description: 'Multilevel warehouse security system, insurance of all goods and a thorough check of personnel. Your product is in good hands!'
             },
             {
                 id: 3,
                 icon: <FaRegThumbsUp />,
-                title: 'Quality',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nisi optio quasi alias sequi, porro cupiditate adipisci tenetur quaerat neque? Tempore consectetur'
+                title: 'Easy',
+                description: 'Human attitude and professional approach. Responsive and friendly Russian-speaking support responds to all calls within 24 hours.'
             }
         ]
     },
@@ -208,8 +211,11 @@ export const enLangData = {
     about: {
         title: 'WHO WE ARE',
         subTitle: 'About',
-        we: 'WE ARE',
+        we: 'WE',
         ourMission: 'Our mission',
         ourGoal: 'Our goal',
+        text1: 'Help sellers from Russia and the CIS countries to work easily and comfortably on Amazon, Ebay, Etsy and other US trading platforms.',
+        text2: 'Everything you need to trade successfully in the USA: sell and earn even more, and we will take care of all the processing of goods!',
+        text3: 'We are always glad to new clients and do our best to make them permanent!'
     }
 }

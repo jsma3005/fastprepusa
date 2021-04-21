@@ -23,9 +23,10 @@ const About = () => {
                             <h1>{about.we}</h1>
                             <div className={cls.line}></div>
                         </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt cupiditate magnam atque assumenda quas amet quisquam aliquam quod quibusdam, repudiandae quae consequuntur nulla repellat sequi ratione reprehenderit! Reprehenderit, doloremque molestiae.</p>
+                        <p>{about.text1}</p>
                         <br />
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend semper molestie. Etiam urna turpis, eleifend molestie aliquet in, interdum sed est. Pellentesque porta neque eget lacinia accumsan. Ut a blandit dolor. Praesent mattis mi ut tempor accumsan. Donec tortor felis, vehicula eu sodales pretium, pulvinar sed odio. Praesent auctor massa sit amet quam vestibulum dapibus. Mauris dapibus erat odio, eu luctus mi consequat sit amet. Nunc hendrerit dapibus varius.</p>
+                        <p>{about.text2}</p>
+                        <p>{about.text3}</p>
                     </div>
                     <div className={cls.aboutRight + ' col-lg-6'}>
                         <img src={AboutContent} alt='About content' />
