@@ -11,8 +11,10 @@
 ### - React Router Dom
 ### - Axios
 ### - SCSS
-### - Hello
-  ### - fasdfasdf
+
+* Hi
+* Hello
+
 
 ## Особенности проекта:
 ### - Взаимодействие с Backend'ом, для получения данных
