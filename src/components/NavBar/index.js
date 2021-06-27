@@ -1,16 +1,25 @@
 import cls from './NavBar.module.scss';
 import { NavHashLink, HashLink } from 'react-router-hash-link';
-// import RuFlag from '../../assets/russia.svg';
-// import EnFlag from '../../assets/usa.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { enLangAction, ruLangAction } from '../../redux/actions/languageAction';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { useMediaQuery } from 'react-responsive'
 
 const NavBar = () => {
     const dispatch = useDispatch();
     const {selectedLangSlug, selectedLang: {navbar}} = useSelector(s => s.langs);
-    // const FLAG = selectedLangSlug === 'RU' ? EnFlag : RuFlag;
     const LANG_TITLE = selectedLangSlug === 'RU' ? 'Русский' : 'English'
+    const isTablets = useMediaQuery({ query: '(max-width: 992px)' });
+
+    const handleChangeRuLang = () => {
+        dispatch(ruLangAction());
+        localStorage.setItem('fastpreplang', 'RU')
+    }
+
+    const handleChangeEnLang = () => {
+        dispatch(enLangAction());
+        localStorage.setItem('fastpreplang', 'EN')
+    }
 
     const handleChangeLang = () => {
         if(selectedLangSlug === 'RU'){
@@ -57,10 +66,25 @@ const NavBar = () => {
                                 <NavHashLink className="nav-link" to="/#contacts">{navbar.contacts}</NavHashLink>
                             </li>
                             <li onClick={e => {
+                                isTablets && 
                                 handleChangeLang();
                                 closeCollase(e);
                             }} className={cls.lang + ' nav-item'}>
                                 <p className='nav-link'>{LANG_TITLE}</p>
+                                <ul className={cls.langDropDown}>
+                                    {
+                                        selectedLangSlug === 'RU' ? (
+                                            <>
+                                                <li onClick={handleChangeEnLang}>English</li>
+                                                <li onClick={handleChangeRuLang}>Русский</li>
+                                            </>
+                                        ) : 
+                                        <>
+                                            <li onClick={handleChangeRuLang}>Русский</li>
+                                            <li onClick={handleChangeEnLang}>English</li>
+                                        </>
+                                    }
+                                </ul>
                             </li>
                         </ul>
                     </div>

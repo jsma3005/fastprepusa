@@ -20,7 +20,7 @@ const Contacts = () => {
                 <div className='col-lg-4 col-md-6'>
                     <h5 className={cls.title}>Fast Prep USA</h5>
                     <ul className={cls.contactsList}>
-                        <li><b>{contacts.address}:</b> <HashLink to="/#map">7420 Avenida Del Mar, unit 2601</HashLink></li>
+                        <li><b>{contacts.address}:</b> <HashLink to="/#map">750 E Sample Rd, unit 5-2, Pompano Beach, FL, 33064</HashLink></li>
                         <li><b>{contacts.number}:</b> <a href="tel:+1(347)444-2565">+1(347)444-2565</a></li>
                         <li><b>{contacts.email}:</b> <a href="mailto:office@fastprepusa.com">office@fastprepusa.com</a></li>
                         <li><b>{contacts.timeTitle}:</b> <span>{contacts.time}</span></li>

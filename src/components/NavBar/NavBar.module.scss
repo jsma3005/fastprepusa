@@ -49,6 +49,37 @@ $dark: #183650;
     box-shadow: none !important;
 }
 
+// Lang
+.lang{
+    position: relative;
+    transition: .5s;
+    &:hover{
+        .langDropDown{
+            top: 85%;
+        }
+    }
+    .langDropDown{
+        transition: .5s;
+        position: absolute;
+        border-radius: 6px;
+        left: -50%;
+        top: -200%;
+        padding-left: 0;
+        background-color: $light;
+        list-style: none;
+        width: 200px;
+        li{
+            margin: 0 !important;
+            color: $dark;
+            padding: .5rem 1rem;
+            cursor: pointer;       
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+}
+
 
 // Media
 
@@ -79,6 +110,9 @@ $dark: #183650;
 @media screen and (max-width: 991px) {
     .root{
         z-index: 15 !important;
+    }
+    .langDropDown{
+        display: none !important;
     }
     .navList{
         background-color: $light;
